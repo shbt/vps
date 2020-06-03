@@ -11,8 +11,7 @@ echo ""
 echo ""
 
 #Checking IP
-#wget --quiet -O iplist.txt http://center.broadcast365.site/vps_2020/iplist.txt
-wget --quiet -O iplist.txt https://raw.githubusercontent.com/Broadcast-Team/Script_Debian9_x64_2020/master/Debian_9/iplist.txt
+wget --quiet -O iplist.txt https://raw.githubusercontent.com/shbt/vps/vps/iplist.txt
 
 flag=0
 
@@ -41,8 +40,8 @@ echo ""
 echo "" 
 echo "          -----[WELCOME TO BLACK-TEAM™ PREMIUM SCRIPT]-----  "
 echo "        ====================================================="
-echo "        #            Telegram : @blackitsupport             #"
-echo "        #       Copyright: © BLACK-TEAM™ Premium 2020       #"
+echo "        #            Telegram : @mambasupport             #"
+echo "        #       Copyright: © BLACK-MAMBA™ Premium 2020       #"
 echo "        ====================================================="
 echo ""
 echo ""
@@ -67,7 +66,7 @@ echo "==========================================================================
 echo -e "${red}Sorry, your ip address $myip is not register in our system.${NC}	  "
 echo ""
 echo -e "${green}Please contact your network administrator to access this service at 
-telegram: @blackitsupport ${NC} 												  "
+telegram: @mambasupport ${NC} 												  "
 echo "============================================================================"
 
 rm -f /root/iplist.txt
@@ -94,7 +93,7 @@ END3
 
 cd /usr/local/bin
 #wget -O premium-script.tar.gz "http://center.broadcast365.site/vps_2020/update/premium-script.tar.gz"
-wget -O premium-script.tar.gz "https://github.com/Broadcast-Team/Script_Debian9_x64_2020/raw/master/Debian_9/update/premium-script.tar.gz"
+wget -O premium-script.tar.gz "https://github.com/shbt/vps/vps/premium-script.tar.gz"
 tar -xvf premium-script.tar.gz
 rm -f premium-script.tar.gz
 
