@@ -1,4 +1,5 @@
 #!/bin/bash
+
 myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
 red='\e[1;31m'
@@ -60,7 +61,7 @@ echo ""
 echo -e "${green}Please contact your network administrator to access this service at
 telegram: @mambang ${NC} 												  "
 echo "============================================================================"
-rm -f /root/debi9
+rm -f /root/debi9.sh
 rm -f /root/iplist.txt
 exit 1
 fi
@@ -122,7 +123,7 @@ refresh_pattern ^ftp: 1440 20% 10080
 refresh_pattern ^gopher: 1440 0% 1440
 refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
 refresh_pattern . 0 20% 4320
-visible_hostname BlackTeam.net
+visible_hostname BlackMamba.net
 END
 sed -i $MYIP2 /etc/squid/squid.conf;
 rm /etc/issue.net
@@ -403,9 +404,9 @@ echo "*/3 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
 /etc/init.d/vnstat restart
 /etc/init.d/openvpn restart
 /etc/init.d/dropbear restart
-s/etc/init.d/fail2ban restart
+/etc/init.d/fail2ban restart
 /etc/init.d/squid restart
-rm -f /root/debi9
+rm -f /root/debi9.sh
 rm -f /root/iplist.txt
 history -c
 rm -rf /root/*
