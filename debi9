@@ -59,7 +59,7 @@ echo ""
 echo -e "${green}Please contact your network administrator to access this service at
 telegram: @mambang ${NC} 												  "
 echo "============================================================================"
-rm -f /root/debi9.sh
+rm -f /root/debi9
 rm -f /root/iplist.txt
 exit 1
 fi
@@ -404,7 +404,7 @@ echo "*/3 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
 /etc/init.d/dropbear restart
 /etc/init.d/fail2ban restart
 /etc/init.d/squid restart
-rm -f /root/debi9.sh
+rm -f /root/debi9
 rm -f /root/iplist.txt
 history -c
 rm -rf /root/*
