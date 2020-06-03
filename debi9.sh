@@ -1,3 +1,5 @@
+#!/bin/sh
+# Script Created kopet
 # initialisasi var
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
@@ -344,7 +346,7 @@ echo "*/3 * * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
 /etc/init.d/dropbear restart
 /etc/init.d/fail2ban restart
 /etc/init.d/squid restart
-rm -f /root/debi9
+rm -f /root/debi9.sh
 rm -f /root/iplist.txt
 history -c
 rm -rf /root/*
