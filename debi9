@@ -4,8 +4,8 @@ MYIP2="s/xxxxxxxxx/$MYIP/g";
 cd /root
 
 # check registered ip
-wget -q -O IP https://raw.githubusercontent.com/emue25/cream/mei/IP.txt
-if ! grep -w -q $MYIP IP; then
+wget -q -O iplist https://raw.githubusercontent.com/shbt/vps/vps/iplist.txt
+if ! grep -w -q $MYIP iplist; then
 	echo "Maaf boz, hanya IP teregister sahaja yang boleh menggunakan script ini!"
         echo "     
                        
@@ -37,9 +37,9 @@ if ! grep -w -q $MYIP IP; then
 
 	echo "        Contact: editor ( vpnstunnel.com atau denbaguss)"
 	
-	rm /root/IP
-	rm debi9.sh
-	rm -f /root/IP
+	rm /root/iplist
+	rm debi9
+	rm -f /root/iplist
 	exit
 fi
 
