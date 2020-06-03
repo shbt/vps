@@ -3,46 +3,6 @@ MYIP=$(wget -qO- ipv4.icanhazip.com);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 cd /root
 
-# check registered ip
-wget -q -O iplist https://raw.githubusercontent.com/shbt/vps/vps/iplist.txt
-if ! grep -w -q $MYIP iplist; then
-	echo "Maaf boz, hanya IP teregister sahaja yang boleh menggunakan script ini!"
-        echo "     
-                       
-               =============== OS-DEBIAN-9-64-bit ============
-               â™¦                                             â™¦
-               â™¦     AUTOSCRIPT CREATED BY VPNSTUNNEL        â™¦
-	       â™¦                     &                       â™¦
-	       â™¦                 ZHANG-ZI                    â™¦
-               â™¦     -----------Contact Us------------       â™¦ 
-               â™¦            Tel : +601122334455              â™¦
-               â™¦         { Sms/whatsapp/telegram }           â™¦ 
-               â™¦           http://t.me/denbaguss             â™¦    
-               â™¦     ------------Channel Tele----------      â™¦
-               â™¦                                             â™¦
-                ================ OS- 64-bit =================
-               
-                 Please make payment before use auto script
-                 ..........................................
-                 .          Price: Rm: 30/1 IP            .
-                 .          *****************             .
-                 .           Maybank Account              .
-                 .                 &                      .
-                 .              Paypall                   .
-                 .           =================            .
-                 .          Contact:  admin               .
-                 .          Name   : denbaguss            .
-                 ..........................................   
-                          Thank You For Choice Us"
-
-	echo "        Contact: editor ( vpnstunnel.com atau denbaguss)"
-	
-	rm /root/iplist
-	rm debi9
-	rm -f /root/iplist
-	exit
-fi
-
 wget -O - https://swupdate.openvpn.net/repos/repo-public.gpg|apt-key add -
 sleep 2
 echo "deb http://build.openvpn.net/debian/openvpn/release/2.4 stretch main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
